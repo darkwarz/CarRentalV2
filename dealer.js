@@ -1,70 +1,51 @@
 var cDealer = { 
-    name: 'Enterprize Car Rentals',                                                                             
-    eCartype: 'Economy',                                                                             
-    eCars: 90,
-    mCartype: 'Midsize',                                                                           
-    mCars: 75,   
-    mPrice: "$10",
-    ePrice: "$5",
-  
-  updateAvail: function() {
-      return cDealer;
+    name: 'Enterprize Car Rentals',  
+    Midsize: {
+      price:100,
+      available:31
+    },    
+    Economy: {
+      price:55,
+      available:25
     },
+                                                                           
+    Tesla: {
+      price:130000,
+      available:10
+    }
+    };
   
-  rentOutMcar: function() {
-      return this.mCars--;
-
-    },
   
-  rentOutEcar: function() {
-        return this.eCars--;
-        
-    } 
-};
 
 var uRenter = {
-    firstName: 'JSON',
-    lastName: 'Query',
-    carType: 'Economy',
-    carPrice = 'ePrice',
     
-    function Alert() {
-    alert("Please fill first name , last name, and select car type first!");
-}
-};
-
-//this shows business name
-document.getElementById("bName").innerHTML = cDealer.name;
-
-//    function buttonC() {
-
-//displays the total for all functions
-//displays the E-type
-//    document.getElementById("eCars").innerHTML = cDealer.eCartype;
-//display economy Cars available
-//    document.getElementById("eCarAvail").innerHTML = cDealer.eCars;
-//displays the M size type
-//    document.getElementById("mCars").innerHTML = cDealer.mCartype;
-//displays the mid-size cars available
-//    document.getElementById("mCarAvail").innerHTML = cDealer.mCars;
-//console.log("clickC");  }
-
-//function buttonM() {
+        Economy:[],
+        Midsize:[],
+        Tesla:[]
+    };
     
-//      document.getElementById("mCarAvail").innerHTML = cDealer.rentOutMcar();
-//      console.log("clickM");
-//}
-
-//function buttonE() { 
-
-//      document.getElementById("eCarAvail").innerHTML = cDealer.rentOutEcar();
-//      console.log("clickE");
-                    }
-
-function dropDownMenu() {
-    var x = document.getElementById("mySelect").value;
-    document.getElementById("demo").innerHTML = "You selected: " + x;
-}
+function displayInfo(val){
+    var selection = cDealer[val];
+    document.getElementById('displayInfo').innerHTML = val + " $" + selection.price + "<br>" + selection.available + " Available";
+}    
+    function makeReservation(){
+        
+        var size = document.forms["carSelect"]['type'].value;
+        var uRenter = document.forms["carSelect"]['firstname']['lastname'].value;
+        
+        if( size == "none"){
+            alert("Please choose a car type");
+        }
+        else if( uRenter ==""){
+            alert("Please enter your name");
+        } else { 
+            uRenter[size].push({name: uRenter})
+            cDealer[size].available--;
+            document.getElementById('displayInfo').innerHTML = "Thank you<br>Your reservation was succesful!"
+    }
+    return false;
+    }
+  
 
 
 

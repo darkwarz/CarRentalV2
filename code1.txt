@@ -1,0 +1,76 @@
+  html code
+  
+    <!--<h3>Business Name</h3>-->
+    <!--<p id="bName"></p>-->
+    
+    <!--<h3>Economy Cars</h3>-->
+    <!--<p id="eCars"></p>-->
+    
+    <!--<h3>Economy Cars Available</h3>-->
+    <!--<p id="eCarAvail"></p>-->
+    
+    <!--<h3>Midsize Cars</h3>-->
+    <!--<p id="mCars"> </p>-->
+    
+    <!--<h3>Midsize Cars Available</h3>-->
+    <!--<p id="mCarAvail"> </p>-->
+    
+        <!--<button id="Calculate" type="button" onclick="buttonC()">Update Availabilty</button>  -->
+        <!--<button id="rentMCar"  type="button" onclick="buttonM()">Rent out 1 Midsize Car</button> -->
+        <!--<button id="rentECar"  type="button" onclick="buttonE()">Rent out 1 Economy Car</button> -->
+    
+    
+    Js code
+    
+ // updateAvail: function() {
+ //     return cDealer;
+ //   },
+  
+ // rentOutMcar: function() {
+ //     return this.mCars--;
+
+//    },
+  
+//  rentOutEcar: function() {
+  //      return this.eCars--;
+        
+   // } 
+   
+   
+   
+    
+   // function Alert() {
+//    alert("Please fill first name , last name, and select car type first!");
+//}
+
+
+//this shows business name
+//document.getElementById("bName").innerHTML = cDealer.name;
+//-------------------------------------------------------------------->
+//    function eCarPrice() {
+//displays the E-type
+//  document.getElementById("eCars").innerHTML = cDealer.eCartype;
+//display economy Cars available
+ //   document.getElementById("eCarAvail").innerHTML = cDealer.eCars;
+//-------------------------------------------------------------------->    
+    }
+
+//    function midSizePrice() {
+//displays the M size type
+ //   document.getElementById("mCars").innerHTML = cDealer.mCartype;
+//displays the mid-size cars available
+ //   document.getElementById("mCarAvail").innerHTML = cDealer.mCars;
+//}
+//console.log("clickC");  }
+
+//function buttonM() {
+    
+//      document.getElementById("mCarAvail").innerHTML = cDealer.rentOutMcar();
+//      console.log("clickM");
+//}
+
+//function buttonE() { 
+
+//      document.getElementById("eCarAvail").innerHTML = cDealer.rentOutEcar();
+//      console.log("clickE");
+
