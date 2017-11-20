@@ -9,10 +9,10 @@
 </head>
 <body>
   
-    <form action="/action_page.php" id="carSelect" name='carSelect' onsubmit='return makeReservation()'>
+    <form id="carSelect" name='carSelect' onsubmit='return reserver()'>
      <p>Select a car from the list.</p>
 
-<select name="type" id="carSelect" onchange='displayInfo(this.value)'>
+<select name="type" id="carSelect" onchange='Info(this.value)'>
   <option disabled hidden="" selected value="none"> Select a car type </option>
   <option value="Midsize" >
       Midsize </option>
@@ -22,21 +22,21 @@
       Tesla </option>
 </select>
 
+
 <p id="demo"></p>
 
 
-  <input name="firstname" placeholder='Your First Name' type="text">
-      
-  <input name="lastname" placeholder='Your Last Name' type="text">
- 
+  <input id="firstname" name="name" onchange='Info(this.value)' placeholder='Your First and Last name ' type="text">
+
   <br><br>
  
-  <input type="submit" value='Rent Car'> 
+<input type="button" value='submit' onclick="rent()"> 
+  
   
 </form>
 
-<h3 id='displayInfo'></h3>
-
+<h3 id='Info'></h3>
+<p id='f1'></p>
     <script src='dealer.js'></script>
 
 </body>

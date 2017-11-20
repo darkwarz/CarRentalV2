@@ -1,22 +1,20 @@
 var cDealer = { 
     name: 'Enterprize Car Rentals',  
     Midsize: {
-      price:100,
+      price:500,
       available:31
     },    
     Economy: {
-      price:55,
+      price:400,
       available:25
     },
                                                                            
     Tesla: {
-      price:130000,
+      price:1000,
       available:10
     }
     };
   
-  
-
 var uRenter = {
     
         Economy:[],
@@ -24,28 +22,31 @@ var uRenter = {
         Tesla:[]
     };
     
-function displayInfo(val){
+function Info(val){
     var selection = cDealer[val];
-    document.getElementById('displayInfo').innerHTML = val + " $" + selection.price + "<br>" + selection.available + " Available";
+    document.getElementById('Info').innerHTML = val + " $" + selection.price + "<br>" + selection.available + " Available";
 }    
-    function makeReservation(){
+    function rent(){
         
         var size = document.forms["carSelect"]['type'].value;
-        var uRenter = document.forms["carSelect"]['firstname']['lastname'].value;
+        var reserver = document.forms["carSelect"]['name'].value;
         
-        if( size == "none"){
+        if( size == "none" && reserver ==""){
+            alert("Please choose a car type and enter your name");
+        }
+        else if( size == "none"){
             alert("Please choose a car type");
         }
-        else if( uRenter ==""){
+        
+        else if( reserver == "") {
             alert("Please enter your name");
-        } else { 
-            uRenter[size].push({name: uRenter})
+        } 
+        else { 
+            uRenter[size].push({name: reserver});
             cDealer[size].available--;
-            document.getElementById('displayInfo').innerHTML = "Thank you<br>Your reservation was succesful!"
+            alert("Thank you, your reservation was succesful!");
+            console.log(uRenter);
     }
     return false;
     }
-  
-
-
-
+    
